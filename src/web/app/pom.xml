@@ -17,7 +17,21 @@
   <packaging>jar</packaging>
   <version>2.13-SNAPSHOT</version>
   <name>GeoServer Web Application</name>
-  <dependencies>
+
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-sglk</id>
+			<name>DICT Nexus Snaphots</name>
+			<url>${nexus.deploy.snapshots}</url>
+		</snapshotRepository>
+		<repository>
+			<id>nexus-sglk</id>
+			<name>DICT Nexus Realeses</name>
+			<url>${nexus.deploy.releases}</url>
+		</repository>
+	</distributionManagement>
+
+<dependencies>
     <dependency>
         <groupId>org.marlin</groupId>
         <artifactId>marlin</artifactId>
